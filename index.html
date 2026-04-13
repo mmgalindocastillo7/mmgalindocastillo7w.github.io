@@ -1,108 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animación</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    
-    <header class="header" id="inicio">
-        <img class="hamburguer" src="img/hamburguesa.svg" alt="">
-        <nav class="menu-navegacion">
-                <a href="#inicio">Inicio</a>
-                <a href="#servicio">Servcio</a>
-                <a href="#galeria">Portafolio</a>
-                <a href="#expertos">Servicios</a>
-                <a href="#footer">Contacto</a>
-        </nav>
-        <div class="contenedor head">
-            <h1 class="titulo">Convertimos tus ideas en una realidad</h1>
-            <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </div>
-        
-    </header>
-    <main>
-        <section class="services contenedor" id="servicio">
-            <h2 class="subtitulo">Nuestro servicio</h2>
-            <div class="contenedor-servicio">
-                <img src="img/checklist.svg" alt="">
-                <div class="checklist-servicio">
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">1</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">2</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">3</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="gallery" id="galeria">
-            <div class="contenedor">
-                <h2 class="subtitulo">Galeria</h2>
-                <div class="contenedor-galeria">
-                    <img src="img/uno.jpg" class="img-galeria" alt="Hola">
-                    <img src="img/dos.jpg" class="img-galeria" alt="">
-                    <img src="img/tres.jpg" class="img-galeria" alt="">
-                    <img src="img/cuatro.jpg" class="img-galeria" alt="">
-                    <img src="img/cinco.jpg" class="img-galeria" alt="">
-                    <img src="img/seis.jpg" class="img-galeria" alt="">
-                </div>
-            </div>
-        </section>
-        <div class="imagen-light">
-            <img src="img/close.svg" alt="" class="close">
-            <img src="" alt="" class="agregar-imagen">
-        </div>
-        <section class="contenedor" id="expertos">
-            <h2 class="subtitulo">Expertos en:</h2>
-            <section class="experts">
-                <div class="cont-expert">
-                    <img src="img/pie_chart.svg" alt="">
-                    <h3 class="n-expert">Analytics</h3>
-                </div>
-                <div class="cont-expert">
-                    <img src="img/search_engine.svg" alt="">
-                    <h3 class="n-expert">SEO</h3>
-                </div>
-                <div class="cont-expert">
-                    <img src="img/security.svg" alt="">
-                    <h3 class="n-expert">Security</h3>
-                </div>
-            </section>
-        </section>
-    </main>
+  <meta charset="UTF-8">
+  <title>Merce QA Automation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+    }
 
-    <footer id="footer">
-        <div class="contenedor footer-content">
-                <div class="contact-us">
-                    <h2 class="brand">AlexCG Design</h2>
-                    <p>Somos expertos en la creación de tus sueños</p>
-                </div>
-                <div class="social-media">
-                    <a href="./" class="social-media-icon">
-                        <i class='bx bxl-facebook'></i>
-                    </a>
-                    <a href="./" class="social-media-icon">
-                        <i class='bx bxl-twitter' ></i>
-                    </a>
-                    <a href="./" class="social-media-icon">
-                        <i class='bx bxl-instagram' ></i>
-                    </a>
-                </div>
-        </div>
-        <div class="line"></div>
-    </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/lightbox.js"></script>
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Maria Mercedes Galindo</h1>
+  <h2>QA Automation Engineer | Playwright | E2E Testing | CI/CD</h2>
+  <p>Automatizo pruebas para asegurar calidad en aplicaciones reales</p>
+</header>
+
+<section>
+  <h2>Sobre mí</h2>
+  <p>
+    QA Automation Engineer con background en desarrollo Full Stack.
+    Especializada en pruebas E2E con Playwright, POM y CI/CD.
+  </p>
+</section>
+
+<section>
+  <h2>Proyecto Destacado</h2>
+
+  <div class="card">
+    <h3>🧪 E-commerce QA Automation</h3>
+    <p>
+      Automatización completa del flujo de compra usando Playwright.
+    </p>
+
+    <ul>
+      <li>Login automatizado</li>
+      <li>Carrito de compras</li>
+      <li>Checkout</li>
+      <li>CI/CD con GitHub Actions</li>
+    </ul>
+
+    <a href="https://github.com/mmgalindocastillo7/ecommerce-qa-automation" target="_blank">
+      <button>Ver Proyecto</button>
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>Habilidades</h2>
+  <p>Playwright | JavaScript | QA Automation | CI/CD | Git</p>
+</section>
+
+<section>
+  <h2>🤖 QA Assistant (IA)</h2>
+  <p>Hazme preguntas sobre mi proyecto:</p>
+
+  <input id="question" placeholder="Ej: ¿Qué es POM?" />
+  <button onclick="responder()">Preguntar</button>
+
+  <p id="respuesta"></p>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <p>📧 Tu correo</p>
+  <p>
+    <a href="https://github.com/mmgalindocastillo7" target="_blank">GitHub</a>
+  </p>
+  <p>
+    <a href="#">LinkedIn</a>
+  </p>
+</section>
+
+<script>
+function responder() {
+  let q = document.getElementById("question").value.toLowerCase();
+  let r = "";
+
+  if (q.includes("pom")) {
+    r = "Page Object Model es un patrón que organiza el código de automatización separando lógica y UI.";
+  } else if (q.includes("playwright")) {
+    r = "Playwright es una herramienta para automatización de pruebas end-to-end.";
+  } else if (q.includes("ci")) {
+    r = "CI/CD permite ejecutar pruebas automáticamente en cada cambio de código.";
+  } else {
+    r = "Estoy especializada en QA Automation con Playwright 😊";
+  }
+
+  document.getElementById("respuesta").innerText = r;
+}
+</script>
+
 </body>
 </html>
