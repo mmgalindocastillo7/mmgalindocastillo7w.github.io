@@ -5,175 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maria Mercedes | QA Automation</title>
 
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="css/estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/4b8b4b8b4b.js" crossorigin="anonymous"></script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0d1117;
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #0d1117, #161b22);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: #8b949e;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 0;
-    }
-
-    .card {
-      background: #161b22;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    h2 {
-      color: #58a6ff;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #238636;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #2ea043;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #21262d;
-      padding: 8px 12px;
-      border-radius: 6px;
-      margin: 5px;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #8b949e;
-    }
-  </style>
 </head>
 
 <body>
 
-<header data-aos="fade-down">
-  <h1>🚀 Maria Mercedes Galindo</h1>
-  <p>QA Automation Engineer | Playwright | CI/CD | Full Stack</p>
+<header>
+  <h1 class="fade-in">🚀 Maria Mercedes Galindo</h1>
+  <p class="fade-in delay">QA Automation Engineer | Playwright | CI/CD</p>
+  <h2 id="typing"></h2>
 </header>
 
-<div class="container">
+<section class="hero fade-in">
+  <p>Automatización de pruebas E2E con enfoque en calidad, eficiencia y CI/CD.</p>
+</section>
 
-  <!-- Proyecto -->
-  <div class="card" data-aos="fade-up">
-    <h2>🧪 Proyecto Destacado</h2>
+<section class="proyecto fade-in">
+  <h2>🧪 Proyecto Destacado</h2>
+
+  <div class="card hover-zoom">
+
+    <!-- IMAGEN DINÁMICA -->
+    <img id="dynamicImage" src="img/test1.png" class="project-img">
+
     <h3>E-commerce QA Automation</h3>
-    <p>Automatización completa del flujo de compra usando Playwright y CI/CD.</p>
 
     <ul>
       <li>✔ Login automatizado</li>
       <li>✔ Carrito de compras</li>
-      <li>✔ Checkout completo</li>
+      <li>✔ Checkout</li>
       <li>✔ CI/CD con GitHub Actions</li>
-      <li>✔ Screenshot automático en fallos</li>
+      <li>✔ Screenshots en fallos</li>
     </ul>
 
-    <a class="btn" href="https://github.com/mmgalindocastillo7/ecommerce-qa-automation" target="_blank">
+    <a href="https://github.com/mmgalindocastillo7/ecommerce-qa-automation" target="_blank">
       Ver Proyecto
     </a>
   </div>
+</section>
 
-  <!-- IA -->
-  <div class="card" data-aos="fade-up">
-    <h2>🤖 QA + Inteligencia Artificial</h2>
-    <p>
-      Integrando IA en pruebas automatizadas para mejorar la detección de errores,
-      optimizar flujos y aumentar la eficiencia en QA.
-    </p>
+<!-- IA -->
+<section class="fade-in">
+  <div class="card">
+    <h2>🤖 QA Assistant con IA</h2>
+
+    <label class="switch">
+      <input type="checkbox" id="iaToggle">
+      <span class="slider"></span>
+    </label>
+
+    <p id="iaText">IA desactivada</p>
   </div>
+</section>
 
-  <!-- Skills -->
-  <div class="card" data-aos="fade-up">
-    <h2>⚡ Habilidades</h2>
-    <div class="skills">
-      <span>Playwright</span>
-      <span>JavaScript</span>
-      <span>QA Automation</span>
-      <span>Testing E2E</span>
-      <span>Git</span>
-      <span>GitHub Actions</span>
-      <span>CI/CD</span>
-      <span>Page Object Model</span>
-    </div>
+<!-- SKILLS -->
+<section class="skills fade-in">
+  <h2>💡 Habilidades</h2>
+  <div class="badges">
+    <span>Playwright</span>
+    <span>JavaScript</span>
+    <span>QA Automation</span>
+    <span>CI/CD</span>
+    <span>GitHub Actions</span>
   </div>
+</section>
 
-  <!-- Contacto -->
-  <div class="card" data-aos="fade-up">
-    <h2>📩 mgalindocastillo6@gmail.E-commerce</h2>
-    <p>Disponible para oportunidades remotas como QA Automation Engineer.</p>
-
-    <a class="btn" href="https://www.linkedin.com/in/mariamercedesgalindocastillo/" target="_blank">
-      LinkedIn
-    </a>
-  </div>
-
-</div>
-
-<footer>
-  © 2026 Maria Mercedes | QA Automation Portfolio
+<footer class="fade-in">
+  <p>© 2026 Maria Mercedes | QA Automation Engineer</p>
 </footer>
 
-<!-- Animaciones -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

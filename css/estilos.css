@@ -5,7 +5,6 @@ body {
   color: #e2e8f0;
 }
 
-/* HEADER */
 header {
   text-align: center;
   padding: 40px;
@@ -14,66 +13,106 @@ header {
 
 h1 {
   margin: 0;
-  font-size: 2.5em;
 }
 
 h2 {
   color: #38bdf8;
 }
 
-/* SECTIONS */
 section {
   padding: 40px;
   max-width: 900px;
   margin: auto;
 }
 
-/* CARD */
 .card {
   background: #1e293b;
   padding: 25px;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  transition: 0.3s;
 }
 
+.hover-zoom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+}
+
+/* BOTÓN */
 .card a {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
   background: #38bdf8;
   color: #0f172a;
-  text-decoration: none;
   border-radius: 8px;
-  font-weight: bold;
-}
-
-/* HOVER */
-.hover-zoom:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+  text-decoration: none;
 }
 
 /* SKILLS */
 .badges span {
-  display: inline-block;
   background: #334155;
   padding: 8px 12px;
   margin: 5px;
   border-radius: 20px;
-  font-size: 0.9em;
-  transition: 0.3s;
+  display: inline-block;
 }
 
-.badges span:hover {
-  background: #38bdf8;
-  color: #0f172a;
+/* IMAGEN */
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* TOGGLE */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #38bdf8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 /* ANIMACIONES */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 1s ease;
+  transition: 1s;
 }
 
 .fade-in.visible {
@@ -81,14 +120,7 @@ section {
   transform: translateY(0);
 }
 
-.delay {
-  transition-delay: 0.5s;
-}
-
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #020617;
-  margin-top: 40px;
 }
