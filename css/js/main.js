@@ -28,10 +28,11 @@ toggle.addEventListener("change", () => {
 
 // IMÁGENES DINÁMICAS
 const images = [
-  "img/test1.png",
-  "img/test2.png",
-  "img/test3.png"
-];
+const images = [
+  "https://picsum.photos/800/400?random=1",
+  "https://picsum.photos/800/400?random=2",
+  "https://picsum.photos/800/400?random=3"
+];];
 
 let index = 0;
 
