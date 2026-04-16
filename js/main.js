@@ -1,31 +1,56 @@
-let ubicacionPrincipal = window.pageYOffset; //0
+// SCROLL ANIMATION
+const elements = document.querySelectorAll('.fade-in');
 
-  AOS.init();
-
-window.addEventListener("scroll", function(){
-    let desplazamientoActual = window.pageYOffset; //180
-    if(ubicacionPrincipal >= desplazamientoActual){ // 200 > 180
-        document.getElementsByTagName("nav")[0].style.top = "0px"
-    }else{
-        document.getElementsByTagName("nav")[0].style.top = "-100px"
+const showOnScroll = () => {
+  elements.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add('visible');
     }
-    ubicacionPrincipal= desplazamientoActual; //200
+  });
+};
 
-})
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
 
-// Menu
 
-let enlacesHeader = document.querySelectorAll(".enlaces-header")[0];
-let semaforo = true;
+// TOGGLE IA
+const toggle = document.getElementById("iaToggle");
+const text = document.getElementById("iaText");
 
-document.querySelectorAll(".hamburguer")[0].addEventListener("click", function(){
-    if(semaforo){
-        document.querySelectorAll(".hamburguer")[0].style.color ="#fff";
-        semaforo= false;
-    }else{
-        document.querySelectorAll(".hamburguer")[0].style.color ="#000";
-        semaforo= true;
-    }
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    text.innerHTML = "🤖 IA activada: análisis inteligente de pruebas.";
+  } else {
+    text.innerHTML = "IA desactivada";
+  }
+});
 
-    enlacesHeader.classList.toggle("menudos")
-})
+
+// IMÁGENES DINÁMICAS
+const images = [
+  "img/test1.png",
+  "img/test2.png",
+  "img/test3.png"
+];
+
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % images.length;
+  document.getElementById("dynamicImage").src = images[index];
+}, 3000);
+
+
+// TYPING EFFECT
+const textTyping = "QA Automation + IA + CI/CD";
+let i = 0;
+
+function typingEffect() {
+  if (i < textTyping.length) {
+    document.getElementById("typing").innerHTML += textTyping.charAt(i);
+    i++;
+    setTimeout(typingEffect, 80);
+  }
+}
+
+typingEffect();
