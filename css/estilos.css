@@ -8,17 +8,7 @@ body {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  animation: fadeIn 1.5s ease-in;
-}
-
-.hero h1 {
-  font-size: 40px;
-}
-
-.hero p {
-  margin: 10px 0;
-  color: #94a3b8;
+  padding: 60px 20px;
 }
 
 /* BOTONES */
@@ -30,75 +20,36 @@ body {
   color: black;
   text-decoration: none;
   border-radius: 8px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #0ea5e9;
 }
 
 /* CONTENEDOR */
 .container {
-  padding: 40px;
+  padding: 20px;
+  display: block; /* 🔥 fuerza visibilidad */
 }
 
 /* TARJETAS */
 .card {
   background: #1e293b;
   padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  transition: 0.3s;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
-}
-
-/* IMÁGENES */
+/* IMAGEN */
 .project-img {
   width: 100%;
-  border-radius: 10px;
   margin-top: 10px;
-  transition: transform 0.3s;
-}
-
-.project-img:hover {
-  transform: scale(1.05);
 }
 
 /* IA MODE */
 .ai-mode {
-  background: linear-gradient(135deg, #020617, #0f172a, #1e3a8a);
+  background: black;
 }
 
-.ai-mode h1,
-.ai-mode p {
-  color: #00f7ff;
-}
-
-/* CHECKBOX */
-.ia-box {
-  text-align: center;
-  margin: 20px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* IMPORTANTE: evita ocultamientos */
+section {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
