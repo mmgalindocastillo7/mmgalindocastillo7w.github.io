@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Maria Mercedes | QA Automation</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <!-- <link rel="stylesheet" href="css/estilos.css"> --></link>
+  
 </head>
 
 <body>
