@@ -1,76 +1,61 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Maria Mercedes | QA Automation</title>
-  <link rel="stylesheet" href="css/estilos.css"> 
-  
-</head>
+// TYPING
+const typing = document.getElementById("typing");
 
-<body>
+if (typing) {
+  const text = "QA Automation | Playwright | CI/CD";
+  let i = 0;
 
-<!-- HERO -->
-<section class="hero">
-  <h1>QA Automation Engineer</h1>
-  <p>Automatizando calidad con Playwright + CI/CD 🚀</p>
-  <a href="#proyectos" class="btn">Ver proyectos</a>
-</section>
+  function write() {
+    if (i < text.length) {
+      typing.innerHTML += text[i];
+      i++;
+      setTimeout(write, 50);
+    }
+  }
+  write();
+}
 
-<!-- IA MODE -->
-<div class="ia-box">
-  <label>
-    <input type="checkbox" id="toggleIA">
-    Activar modo IA ✨
-  </label>
-</div>
+// IA MODE
+const toggle = document.getElementById("toggleIA");
+if (toggle) {
+  toggle.addEventListener("change", () => {
+    document.body.classList.toggle("ai-mode");
+  });
+}
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="container">
+// CHATBOT
+const input = document.getElementById("chat-input");
+const body = document.getElementById("chat-body");
 
-  <div class="card">
-    <h2>🧪 E-commerce QA Automation</h2>
-    <p>Automatización E2E completa del flujo de compra</p>
+function addMsg(text, type) {
+  const msg = document.createElement("div");
+  msg.className = type;
+  msg.innerText = text;
+  body.appendChild(msg);
+  body.scrollTop = body.scrollHeight;
+}
 
-    <img src="https://picsum.photos/800/400" class="project-img">
+function response(text) {
+  text = text.toLowerCase();
 
-    <ul>
-      <li>Login automatizado</li>
-      <li>Carrito de compras</li>
-      <li>Checkout</li>
-      <li>CI/CD con GitHub Actions</li>
-    </ul>
+  if (text.includes("proyecto")) return "Tengo un proyecto QA automatizado con Playwright.";
+  if (text.includes("tecnologia")) return "Uso Playwright, JS y CI/CD.";
+  if (text.includes("experiencia")) return "Soy Full Stack + QA Automation.";
+  if (text.includes("contacto")) return "Puedes ver mi LinkedIn o GitHub.";
 
-    <a href="https://github.com/mmgalindocastillo7" class="btn">Ver proyecto</a>
-  </div>
+  return "Puedo contarte sobre QA, proyectos o tecnologías.";
+}
 
-</section>
+if (input) {
+  input.addEventListener("keypress", e => {
+    if (e.key === "Enter") {
+      addMsg(input.value, "user");
 
-<!-- RESULTADOS -->
-<section class="container">
-  <h2>Resultados QA</h2>
-  <ul>
-    <li>✔ Automatización E2E completa</li>
-    <li>✔ Reducción de errores manuales</li>
-    <li>✔ Integración CI/CD</li>
-  </ul>
-</section>
+      setTimeout(() => {
+        addMsg(response(input.value), "bot");
+      }, 500);
 
-<!-- CONTACTO -->
-<section class="container">
-  <div class="card">
-    <h2>Contacto</h2>
-    <p>Disponible para oportunidades remotas</p>
-
-    <a href="https://www.linkedin.com/in/mariamercedesgalindocastillo/" class="btn">LinkedIn</a>
-    <a href="https://github.com/mmgalindocastillo7" class="btn">GitHub</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Maria Mercedes | QA Automation</p>
-</footer>
-
-<script src="js/main.js"></script>
-
-</body>
-</html>
+      input.value = "";
+    }
+  });
+}

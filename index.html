@@ -11,7 +11,7 @@
 <!-- HERO -->
 <section class="hero">
   <h1>QA Automation Engineer</h1>
-  <p>Automatizando calidad con Playwright + CI/CD 🚀</p>
+  <p id="typing"></p>
   <a href="#proyectos" class="btn">Ver proyectos</a>
 </section>
 
@@ -28,45 +28,63 @@
 
   <div class="card">
     <h2>🧪 E-commerce QA Automation</h2>
-    <p>Automatización E2E completa del flujo de compra</p>
 
-    <img src="https://picsum.photos/800/400" class="project-img">
+    <img src="https://picsum.photos/800/400?2" class="project-img">
 
-    <ul>
-      <li>Login automatizado</li>
-      <li>Carrito de compras</li>
-      <li>Checkout</li>
-      <li>CI/CD con GitHub Actions</li>
-    </ul>
+    <p>
+      Automatización E2E del flujo de compra con Playwright y CI/CD.
+    </p>
 
-    <a href="https://github.com/mmgalindocastillo7" class="btn">Ver proyecto</a>
+    <div class="tags">
+      <span>Playwright</span>
+      <span>JavaScript</span>
+      <span>CI/CD</span>
+    </div>
+
+    <a href="https://github.com/mmgalindocastillo7" class="btn">Ver código</a>
   </div>
 
 </section>
 
-<!-- RESULTADOS -->
+<!-- SKILLS -->
 <section class="container">
-  <h2>Resultados QA</h2>
-  <ul>
-    <li>✔ Automatización E2E completa</li>
-    <li>✔ Reducción de errores manuales</li>
-    <li>✔ Integración CI/CD</li>
-  </ul>
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <p>Playwright</p>
+    <div class="bar"><div class="progress" style="width:85%"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="bar"><div class="progress" style="width:80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>QA Testing</p>
+    <div class="bar"><div class="progress" style="width:90%"></div></div>
+  </div>
+
 </section>
 
 <!-- CONTACTO -->
 <section class="container">
   <div class="card">
     <h2>Contacto</h2>
-    <p>Disponible para oportunidades remotas</p>
-
     <a href="https://www.linkedin.com/in/mariamercedesgalindocastillo/" class="btn">LinkedIn</a>
     <a href="https://github.com/mmgalindocastillo7" class="btn">GitHub</a>
   </div>
 </section>
 
+<!-- CHATBOT -->
+<div id="chatbot">
+  <div id="chat-header">🤖 Asistente IA</div>
+  <div id="chat-body"></div>
+  <input type="text" id="chat-input" placeholder="Pregúntame algo...">
+</div>
+
 <footer>
-  <p>© 2026 Maria Mercedes | QA Automation</p>
+  <p>© 2026 Maria Mercedes</p>
 </footer>
 
 <script src="js/main.js"></script>
