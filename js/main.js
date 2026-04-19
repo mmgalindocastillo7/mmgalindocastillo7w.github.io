@@ -1,4 +1,6 @@
-// TYPING
+// =======================
+// TYPING EFFECT
+// =======================
 const typing = document.getElementById("typing");
 
 if (typing) {
@@ -15,15 +17,20 @@ if (typing) {
   write();
 }
 
+// =======================
 // IA MODE
+// =======================
 const toggle = document.getElementById("toggleIA");
+
 if (toggle) {
   toggle.addEventListener("change", () => {
     document.body.classList.toggle("ai-mode");
   });
 }
 
+// =======================
 // CHATBOT
+// =======================
 const input = document.getElementById("chat-input");
 const body = document.getElementById("chat-body");
 
@@ -35,25 +42,47 @@ function addMsg(text, type) {
   body.scrollTop = body.scrollHeight;
 }
 
-function response(text) {
-  text = text.toLowerCase();
+// =======================
+// IA REAL + FALLBACK
+// =======================
+async function response(text) {
+  try {
+    const res = await fetch("http://localhost:3000/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message: text })
+    });
 
-  if (text.includes("proyecto")) return "Tengo un proyecto QA automatizado con Playwright.";
-  if (text.includes("tecnologia")) return "Uso Playwright, JS y CI/CD.";
-  if (text.includes("experiencia")) return "Soy Full Stack + QA Automation.";
-  if (text.includes("contacto")) return "Puedes ver mi LinkedIn o GitHub.";
+    const data = await res.json();
+    return data.reply;
 
-  return "Puedo contarte sobre QA, proyectos o tecnologías.";
+  } catch (error) {
+    // 🔥 FALLBACK INTELIGENTE
+    text = text.toLowerCase();
+
+    if (text.includes("proyecto")) return "Tengo un proyecto QA automatizado con Playwright.";
+    if (text.includes("tecnologia")) return "Uso Playwright, JavaScript y CI/CD.";
+    if (text.includes("experiencia")) return "Soy Full Stack + QA Automation.";
+    if (text.includes("contacto")) return "Puedes ver mi LinkedIn o GitHub.";
+
+    return "No pude conectar con IA, pero puedo ayudarte igual.";
+  }
 }
 
+// =======================
+// EVENTO CHAT
+// =======================
 if (input) {
-  input.addEventListener("keypress", e => {
+  input.addEventListener("keypress", async (e) => {
     if (e.key === "Enter") {
-      addMsg(input.value, "user");
 
-      setTimeout(() => {
-        addMsg(response(input.value), "bot");
-      }, 500);
+      const userText = input.value;
+      addMsg(userText, "user");
+
+      const reply = await response(userText);
+      addMsg(reply, "bot");
 
       input.value = "";
     }
